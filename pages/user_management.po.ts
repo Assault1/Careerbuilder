@@ -37,23 +37,9 @@ export class user_management {
   forgotPassword = element(by.id("employerForgotPasswordLink"));
   newAccount = element(by.id("registrationLink"));
   createNew = element(by.className("mat-fab mat-accent"));
-  topMenu = element.all(by.className("drop-box-wrapper fixed-down-right open-on-hover");
+  topMenu = element.all(by.className("drop-box-wrapper fixed-down-right open-on-hover"));
   postJob = element(by.partialLinkText("Post A Job"));
   home = element(by.xpath("//a[@class='ng-star-inserted cut-dropdown-active']"))
-
-
-
-
-
-
-  //****************** Search a record *****************************************************************************/ 
-  
-
-  //****************** Delete a record *****************************************************************************/ 
-  
-  //****************** login user util function *******************************************************/ 
-
- 
 
 
 }
