@@ -1,4 +1,7 @@
 import { browser, by, element, ElementFinder, ExpectedConditions } from 'protractor';
+const { Given, When, Then } = require("cucumber");
+const chai = require("chai").use(require("chai-as-promised"));
+const expect = chai.expect;
 
 export class user_management {
 
@@ -26,8 +29,20 @@ export class user_management {
     });
   }
 
+  async login(email, password) {
+
+    await this.emailid.sendKeys("Personified.Tester3@careerbuilder.com");
+    await this.pass.sendKeys("c0lumbusrocks!");
+    await this.submit.click();
+    await browser.getTitle().then((title) => {
+      expect(title).to.contain("Homepage");
+
+  })
+
+  }
+
   //***************** */ Page object of a webpage *******************************************************/ 
-  
+
   emailid = element(by.id("cbsys_login_email"));
   pass = element(by.id("cbsys_login_password"));
   submit = element(by.id("btnsigninemp"));
@@ -43,3 +58,6 @@ export class user_management {
 
 
 }
+
+
+
